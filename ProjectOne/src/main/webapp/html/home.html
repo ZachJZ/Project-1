@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Energy Financial : Home</title>
+	
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Energy Financial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/ProjectOne/html/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/ProjectOne/logout.change">Logout</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Building your energy for a better tomorrow</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col"">
+      
+    </div>
+    <div class="col">
+		
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>
+
+
+<!--
+<h1 id="welcomeHeading">WELCOME HOME!</h1>
+need to display pending requests
+
+need to have a 'modal' button for making new requests
+
+logout button, with alternative of going back and closing out to log you out
+
+
+figure out an admin home
+ -->
+ 
+ <div class="container">
+  <!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Submit New Reimbursement Request</button>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Reimbursement Form</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true">&times;</span>
+	        	</button>
+	      </div>
+	      <div class="modal-body">
+		         <form method="post" id="modal-details" action="/ProjectOne/newreimbrequest.change">
+		          <div class="form-group">
+		            <label for="recipient-name" class="col-form-label">Amount:</label>
+		            <input type="number" name="reqAmount" class="form-control" id="myAmount">
+		          </div>
+		          <div class="form-group">
+		            <label for="message-text" class="col-form-label">Description:</label>
+		            <textarea class="form-control" name="reqDescription" id="myDescription"></textarea>
+		          </div>
+		          <div class="form-group">
+		            <label for="message-text" class="col-form-label">Type:</label>
+		            <br>(1 for business, 2 for personal) 
+		            <input type="number" class="form-control" name="reqType" id="myType"></textarea>
+		          </div>
+		        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="submit" class="btn btn-primary" form="modal-details">Submit</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+ </div>
+	 
+ <div class="container">
+	<table class="table table-bordered" id="table">
+	  <thead>
+		    <tr>
+		      <th data-field="reimb_id">Reimbursement ID</th>
+		      <th data-field="amount">Amount</th>
+		      <th data-field="submit_time">Time Submitted</th>
+		      <th data-field="resolve_time">Time Resolved</th>
+		      <th data-field="description">Description</th>
+		      <th data-field="author">Author ID</th> <!--  your id -->
+		      <th data-field="resolver">Resolver ID</th>
+		      <th data-field="status">Status</th>
+		      <th data-field="type">Type</th>
+		    </tr>
+	  </thead>
+	</table>
+ </div>
+
+<script type="text/javascript" src="js/home.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+</body>
+</html>
