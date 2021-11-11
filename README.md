@@ -42,8 +42,8 @@ List of features ready and TODOs for future development
 
 Getting Started
 
-(include git clone command) (include all environment setup steps)
-git clone
+(git clone https://github.com/ZachJZ/Project-1.git) 
+(include all environment setup steps)
 open the project in eclipse
 in the connection.properties file you will have to connect your own databse under the 'url' variable 
     and must set the user credentials for that databse under the 'username' and 'password' variables
