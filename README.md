@@ -4,41 +4,59 @@ Project Description
 Here goes your awesome project description!
 Technologies Used
 
-    Tech 1 - version 1.0
-    Tech 2 - version 2.0
-    Tech 3 - version 3.0
+    AWS RDS,
+    Bootstrap,
+    CSS, 
+    DBBeaver, 
+    Eclipse IDE,
+    Git.
+    HTML, 
+    Java, 
+    JavaScript,
+    JDBC, 
+    Log4J, 
+    Maven
+    PostgreSQL, 
+    Tomcat,
+    RDS,
+    Servlets
+    SQL    
+
 
 Features
 
 List of features ready and TODOs for future development
 
-    Awesome feature 1
-    Awesome feature 2
-    Awesome feature 3
+    Login
+        Admin User
+        Employee User
+    Submitting Reimbursement Request
+    Approval/Denial of Requests
+    
+    TODOs
+        Password hashing
+        User registration
+        Admin promotion
+        Reimbursement submission permissions  (an admin can't approve their own request)
 
-To-do list:
-
-    Wow improvement to be done 1
-    Wow improvement to be done 2
 
 Getting Started
 
 (include git clone command) (include all environment setup steps)
+git clone
+open the project in eclipse
+in the connection.properties file you will have to connect your own databse under the 'url' variable 
+    and must set the user credentials for that databse under the 'username' and 'password' variables
+    (this is used in the DBConnection.java file)
+Inside of your database there will need to be a employee user and an admin user created for the application to be fully functional
+    In order to do this, create your employee user with whatever username and password you like, but with a user_role_id of '1'
+    Similarly for creating the admin user, you can use any username and password, but the user_rold_id must be '2' for an admin user. 
 
-    Be sure to include BOTH Windows and Unix command
-    Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
 
-    All the code required to get started
-    Images of what it should look like
 
 Usage
 
-    Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+After the 'Getting Started' steps are completed, you can run the project as a Java application or on a Tomcat Server.
+Once running, you can login as either user and submit a request, but only the admin user can approve the request. 
 
-Contributors
 
-    Here list the people who have contributed to this project. (ignore this section, if its a solo project)
-
-License
-
-This project uses the following license: <license_name>.
